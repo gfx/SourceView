@@ -15,6 +15,8 @@ my $ua = Furl->new(
     headers => [ 'Accept-Encoding' => 'gzip', ],
 );
 
+my $vimcolor = Text::VimColor->new();
+
 my $cache = Cache::LRU->new(
     size => 100,
 );
@@ -51,9 +53,7 @@ any '/v/*', => sub {
     $file->print( $content );
     $file->close();
 
-    my $sc = Text::VimColor->new(
-        file => $file->filename,
-    );
+    my $sc = $vimcolor->syntax_mark_file( $file->filename );
     my $n = 0;
     my $html = join "\n", map {
         $n++;
