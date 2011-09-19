@@ -2,7 +2,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME          => 'SourceView',
-    AUTHOR        => 'Some Person <person@example.com>',
+    AUTHOR        => 'Fuji, Goro <gfuji@cpan.org>',
     VERSION_FROM  => 'lib/SourceView.pm',
     PREREQ_PM     => {
         'Amon2'                           => '2.50',
@@ -11,6 +11,7 @@ WriteMakefile(
         'Plack::Middleware::ReverseProxy' => '0.09',
         'HTML::FillInForm::Lite'          => '1.09',
         'Time::Piece'                     => '1.20',
+        'Text::VimColor'                  => '0.13',
     },
     MIN_PERL_VERSION => '5.008001',
     (-d 'xt' and $ENV{AUTOMATED_TESTING} || $ENV{RELEASE_TESTING}) ? (
