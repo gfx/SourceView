@@ -1,0 +1,15 @@
+: cascade include::layout;
+
+: override content -> {
+<p>Original: <a href="<: $uri :>"><: $uri :></a></p>
+<table>
+<tr>
+<td class="line_numbers">
+: for [1 .. $lines] -> $line {
+<a id="L<: $line :>" href="#L<: $line :>"><: $line :></a>
+: }
+</td>
+<td class="source"><pre><code id="source"><: $source :></code></pre></td>
+</tr>
+<table>
+: }

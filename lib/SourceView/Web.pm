@@ -22,7 +22,7 @@ use Text::Xslate;
         $view_conf->{path} = [ File::Spec->catdir(__PACKAGE__->base_dir(), 'tmpl') ];
     }
     my $view = Text::Xslate->new(+{
-        'syntax'   => 'TTerse',
+        'syntax'   => 'Kolon',
         'module'   => [ 'Text::Xslate::Bridge::TT2Like' ],
         'function' => {
             c => sub { Amon2->context() },
