@@ -16,6 +16,7 @@ WriteMakefile(
         'Text::VimColor'                  => '0.13',
         'Furl'                            => '0.38',
         'Test::WWW::Mechanize'            => '0.35',
+        'Cache::LRU'                      => '0.03',
     },
     MIN_PERL_VERSION => '5.008001',
     (-d 'xt' and $ENV{AUTOMATED_TESTING} || $ENV{RELEASE_TESTING}) ? (
