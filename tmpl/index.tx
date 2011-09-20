@@ -12,8 +12,6 @@ function go() {
 <hr class="space">
 
 <div class="span-15 colborder">
-    <h1>SourceView</h1>
-
     <p>
     <input type="text" placeholder="http://example.com/foo.pl" id="uri" size="100" />
     <input type="button" value="view" onClick="go()" />
