@@ -40,6 +40,7 @@ any '/' => sub {
 any '/v/*', => sub {
     my($c, $r) =  @_;
     my($uri) = @{ $r->{splat} };
+    $uri =~ s{http:/+}{http://}g;
 
     my $res = _get($uri);
     if(!$res or !$res->is_success) {
