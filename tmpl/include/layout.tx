@@ -25,7 +25,8 @@
             : block content -> { }
         </div>
         <footer>
-            Powered by <a href="http://amon.64p.org/">Amon2</a>
+            Powered by <a href="http://amon.64p.org/">Amon2</a>,
+            <a href="https://github.com/gfx/SourceView">SourceView</a>
         </footer>
     </div>
 </body>
